@@ -16,8 +16,8 @@ mean_flipper_length <- mean(penguins$flipper_length_mm, na.rm = TRUE)
 
 # Description of the dataset
 The `penguins` dataset contains 344 rows and 8 columns. It includes data on various characteristics of penguins, such as their species, island, bill length, bill depth, flipper length, body mass, and sex. 
-
 One important variable, `species`, includes three values: "Adelie", "Chinstrap", and "Gentoo". Another variable of interest is `flipper_length_mm`, which measures the penguin's flipper length in millimeters. The mean flipper length across all penguins in the dataset is 200.92 mm.
+
 ```{r}
 library(ggplot2)
 
@@ -32,6 +32,8 @@ ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)
   ) +
   theme_minimal()
 
+# Save plot to file
+ggsave("scatterplot_flipper_vs_bill.png", width = 6, height = 4)
 
 ```
 
