@@ -64,9 +64,17 @@ mean_logical_vector = mean(hw1_df$logical_vector)
 # mean_factor_vector = mean(hw1_df$factor_vector) #cause error
 
 # Coerce character and factor variables to numeric
-numeric_character_vector <- as.numeric(hw1_df$character_vector)
-numeric_factor_vector <- as.numeric(hw1_df$factor_vector)
+numeric_character_vector = as.numeric(hw1_df$character_vector)
+numeric_factor_vector = as.numeric(hw1_df$factor_vector)
 
+# Calculate the mean of each variable after coercion
+mean_character_vector = mean(numeric_character_vector)
+mean_factor_vector = mean(numeric_factor_vector)
 
+#Print the means
+cat("The mean of the random_sample is:",  mean_random_sample )
+cat("The mean of the logical_vector is" , mean_logical_vector )
+cat("The mean of the character_vector is", mean_character_vector)
+cat("The mean of the factor_vector is", mean_factor_vector)
 ```
 
